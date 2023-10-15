@@ -1,7 +1,7 @@
 def solve_n_queens(n):
     def solve_n_queens_util(row, ld, rd):
         if row == n:
-            solutions.append(["".join("Q" if i == col else "." for i in range(n)) for col in board])
+            solutions.append(["".join(" Q " if i == col else " . " for i in range(n)) for col in board])
             return
 
         for col in range(n):
@@ -29,6 +29,6 @@ def print_solutions(solutions):
         print()
 
 # Example usage:
-n = 8  # Change this to the desired board size
+n = 4  # Change this to the desired board size
 solutions = solve_n_queens(n)
 print_solutions(solutions)
